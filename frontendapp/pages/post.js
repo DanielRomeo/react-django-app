@@ -22,9 +22,9 @@ const Post = () => {
 		})
 	}
 
-	useEffect(()=>{
-		sendDataToApi()
-	})
+	// useEffect(()=>{
+	// 	sendDataToApi()
+	// })
 
 	return (
 		<div>
