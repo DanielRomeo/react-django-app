@@ -5,40 +5,22 @@ import axios from 'axios'
 
 const Home = () => {
 
-	const [names, setNames] = useState([]);
+	const [persons, setPersons] = useState([]);
 
-	// useEffect( ()=>{
-	// 	axios.get('http://localhost:8024/userfindAutoGens')
-	// 	.then((response)=>{
-	// 		console.log(response.data)
-	// 		setNames(response.data)
+	useEffect( ()=>{
+		axios.get('http://localhost:8000/')
+		.then((response)=>{
+			console.log(response.data)
+			setNames(response.data)
 
-	// 	})
-	// 	.catch((error)=>{
-	// 		console.log(error)
-	// 	})
-	// }, [])
-
-	let object = {
-		firstname : 'neo',
-		lastname: 'sam',
-		password: 'password',
-		email: 'neo@gmail.com'
-	}
-
-	const sendDataToApi= ()=>{
-		axios.post('http://localhost:8024/usercreate', object)
-		.then((res)=>{
-			console.log(res)
 		})
 		.catch((error)=>{
 			console.log(error)
 		})
-	}
 
-	useEffect(()=>{
-		sendDataToApi()
-	})
+	}, [])
+
+
 
 	return (
 		<div>

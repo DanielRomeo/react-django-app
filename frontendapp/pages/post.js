@@ -2,19 +2,18 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
 
-const Home = () => {
+const Post = () => {
 
-	const [names, setNames] = useState([]);
 
 	let object = {
-		firstname : 'neo',
-		lastname: 'sam',
+		firstname : 'Phuti',
+		lastname: 'lamola',
 		password: 'password',
-		email: 'neo@gmail.com'
+		email: 'phuti@gmail.com'
 	}
 
 	const sendDataToApi= ()=>{
-		axios.post('http://localhost:8024/usercreate', object)
+		axios.post('http://localhost:8000/', object)
 		.then((res)=>{
 			console.log(res)
 		})
@@ -30,6 +29,7 @@ const Home = () => {
 	return (
 		<div>
 			<h3>Insert info you want to send to the server: </h3>
+            <button onSubmit={sendDataToApi}>Press this button to send 'phuti', 'lamola' to the server</button>
 			
 		</div>
 	);
@@ -38,4 +38,4 @@ const Home = () => {
 
 
 
-export default Home;
+export default Post;
