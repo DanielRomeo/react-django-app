@@ -14,3 +14,8 @@
 4. Create a NEXT.JS application [NextJS website](https://nextjs.org/docs/api-reference/create-next-app).
 
 ### You're all ready to start working on your project.
+
+### When running, assuming your app runs on port 8000 and 3000:
+1. Visit `localhost:3000` to see whats in your data.
+2. Visit `localhost:3000/post` to click on a button to send data to the server.
+3. Visit `localhost:3000` again to see that your data has been changed.
