@@ -11,7 +11,7 @@ const Home = () => {
 		axios.get('http://localhost:8000/')
 		.then((response)=>{
 			console.log(response.data)
-			setNames(response.data)
+			setPersons(response.data)
 
 		})
 		.catch((error)=>{
@@ -20,23 +20,21 @@ const Home = () => {
 
 	}, [])
 
-
-
 	return (
 		<div>
 			<h3>Information already in the Server is: </h3>
 			{
-				// names != undefined ? (
+				persons != undefined ? (
 
-				// 	names.map((user:any) => (
-				// 		<p>{user.firstname } {user.lastname} and email is : {user.email}</p>
-				// 	))
-				// )
+					persons.map((user) => (
+						<p>{user.firstname } {user.lastname} and email is : {user.email}</p>
+					))
+				)
 				
-				//  : 
-				// (<div>
-				// 	there is nothing here....
-				// </div>)
+				 : 
+				(<div>
+					there is nothing here....
+				</div>)
 			}
 		</div>
 	);
