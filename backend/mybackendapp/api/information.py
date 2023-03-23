@@ -1,2 +1,17 @@
 
-Persons = [{'name': 'Dan', 'age': 20}, {'name': 'Kim', 'age': 33}, {'name': 'Dan', 'age': 20}, {'name': 'Paul', 'age': 100}]
+Persons = [
+    {
+        'firstname' : 'Neo',
+	    'lastname': 'mangena',
+	    'password': 'password',
+	    'email': 'neo@gmail.com'
+    }, 
+    {
+        'firstname' : 'Romeo',
+	    'lastname': 'Mamphekgo',
+	    'password': 'password',
+	    'email': 'romeo@gmail.com'
+    }
+
+]
+       

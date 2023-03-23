@@ -2,22 +2,9 @@
 import { useState, useEffect } from "react";
 import axios from 'axios'
 
-
 const Home = () => {
 
 	const [names, setNames] = useState([]);
-
-	// useEffect( ()=>{
-	// 	axios.get('http://localhost:8024/userfindAutoGens')
-	// 	.then((response)=>{
-	// 		console.log(response.data)
-	// 		setNames(response.data)
-
-	// 	})
-	// 	.catch((error)=>{
-	// 		console.log(error)
-	// 	})
-	// }, [])
 
 	let object = {
 		firstname : 'neo',
@@ -42,20 +29,8 @@ const Home = () => {
 
 	return (
 		<div>
-			<h3>Information already in the Server is: </h3>
-			{
-				// names != undefined ? (
-
-				// 	names.map((user:any) => (
-				// 		<p>{user.firstname } {user.lastname} and email is : {user.email}</p>
-				// 	))
-				// )
-				
-				//  : 
-				// (<div>
-				// 	there is nothing here....
-				// </div>)
-			}
+			<h3>Insert info you want to send to the server: </h3>
+			
 		</div>
 	);
 };

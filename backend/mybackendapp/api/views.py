@@ -10,11 +10,11 @@ from .information import  Persons
 @api_view(['GET', 'POST'])
 def getData(request):
     if request.method == 'GET':
-
         data = Persons
-        return Response(data)
+        return Response(data, status=status.HTTP_200_OK)
     
     elif request.method == 'POST':
-        person_data = JSONParser().parse(request)
-        print(person_data)
-        return Response({'hello': 'worls'})
+        person_data = JSONParser().parse(request) # here we get the object and we convert it into json
+        # print(person_data) You can print it out here, to see what exactly you find
+        Persons.append(person_data) # add the data into the array of objects
+        return Response(Persons, status.status.HTTP_202_ACCEPTED) # send back the new information to the frontend
