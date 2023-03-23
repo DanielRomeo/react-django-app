@@ -1,7 +1,7 @@
-from rest_framework import serialziers
-from base.models import Item
+# from rest_framework import serialziers
+# from base.models import Item
 
-class ItemSerializer(serialziers.ModelSerializer):
-    class Meta: 
-        model = Item
-        fields = '__all__'
+# class ItemSerializer(serialziers.ModelSerializer):
+#     class Meta: 
+#         model = Item
+#         fields = '__all__'
