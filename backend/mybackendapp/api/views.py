@@ -17,4 +17,4 @@ def getData(request):
         person_data = JSONParser().parse(request) # here we get the object and we convert it into json
         # print(person_data) You can print it out here, to see what exactly you find
         Persons.append(person_data) # add the data into the array of objects
-        return Response(Persons, status.status.HTTP_202_ACCEPTED) # send back the new information to the frontend
+        return Response(Persons, status=status.HTTP_202_ACCEPTED) # send back the new information to the frontend

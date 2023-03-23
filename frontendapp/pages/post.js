@@ -29,7 +29,8 @@ const Post = () => {
 	return (
 		<div>
 			<h3>Insert info you want to send to the server: </h3>
-            <button onSubmit={sendDataToApi}>Press this button to send 'phuti', 'lamola' to the server</button>
+			<br/>
+            <button onClick={sendDataToApi}>Press this button to send 'phuti', 'lamola' to the server</button>
 			
 		</div>
 	);
