@@ -3,8 +3,6 @@ import { useState, useEffect } from "react";
 import axios from 'axios'
 
 const Post = () => {
-
-
 	let object = {
 		firstname : 'Phuti',
 		lastname: 'lamola',
@@ -21,11 +19,6 @@ const Post = () => {
 			console.log(error)
 		})
 	}
-
-	// useEffect(()=>{
-	// 	sendDataToApi()
-	// })
-
 	return (
 		<div>
 			<h3>Insert info you want to send to the server: </h3>
